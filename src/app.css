@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #1e40af;
+  --secondary-color: #93c5fd;
+  --background-color: #1e293b;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  color: black;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.color-white{
+    color:white;
+}
+.navbar {
+  border-bottom: solid 1px;
+  padding-bottom: 1em;
+}
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  /* font-weight:bold; */
+}
+.navbar a:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+a {
+  color: white;
+}
+
+/* header-section */
+.parallax-image {
+  background-image: url(https://bookery.netlify.app/static/media/library-img.5cfe8ee0.jpg);
+  background-size:cover;
+}
+.header-section {
+  background-attachment: fixed;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  /* flex-direction: row; */
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-justify-content-center {
+  justify-content: center;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.py-5 {
+  padding: 5em 0;
+}
+.px-3 {
+  padding: 0 3em;
+}
+.parallax-image::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.parallax-image > * {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-head {
+  line-height: 1.1;
+  font-size: 2.5rem;
+  color:white;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.btn-primary {
+  background-color: #ee0063;
+  border: 2px solid #ee0063;
+}
+.btn {
+  min-width: 80px;
+  width: max-content;
+  padding: 0.25rem 1.25rem;
+  height: max-content;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.5rem;
+  /* padding:0.25rem; */
+}
+/* genre */
+.genre-container{
+    display: flex;
+    margin:2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.genre-container-heading{
+    font-size:2.5rem;
+}
+
+
+.category-container {
+  margin: 0 auto;
+  grid-gap: 2rem;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+.card {
+  position: relative;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.category {
+  width: 100%;
+  height: 20rem;
+}
+.category-img {
+  object-position: center center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+}
+.category-container .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--bg-card-color);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.card-content {
+  grid-gap: 1rem;
+  gap: 1rem;
+  /* width:100%;   */
+}
+.card-heading {
+  font-size: 2rem;
+}
+  
+/* .category-container .card {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
+.genre p{
+    font-size:1.4rem;
+}
+.genre h1{
+    font-size:2rem;
+}
+
+footer.footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: var(--background-color);
+    bottom:0;
+    width:100%;
+  }
+  
